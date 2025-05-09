@@ -28,6 +28,11 @@ export const skillsData: Skill[] = [
   { id: 'skill18', name: 'AWS', level: 75, category: 'Cloud' },
   { id: 'skill19', name: 'CI/CD', level: 85, category: 'Methodologies' },
   { id: 'skill20', name: 'Scrum', category: 'Methodologies' },
+  { id: 'skill21', name: 'Communication', category: 'Soft Skills' },
+  { id: 'skill22', name: 'Leadership', category: 'Soft Skills' },
+  { id: 'skill23', name: 'Empathy', category: 'Soft Skills' },
+  { id: 'skill24', name: 'Adaptability', category: 'Soft Skills' },
+  { id: 'skill25', name: 'Conflict Resolution', category: 'Soft Skills' },
 ];
 
 export const skillCategories: string[] = [
