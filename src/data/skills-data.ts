@@ -5,10 +5,6 @@ export interface Skill {
   category: string;
   proficiency?: string; // For languages (e.g., Native, Advance)
 }
-export interface Certification {
-  level: number; // Proficiency level (0-100)
-  category: string;
-}
 
 export const skillsData: Skill[] = [
   { id: 'skill1', name: 'JavaScript', level: 95, category: 'Frontend' },
@@ -34,25 +30,8 @@ export const skillCategories: string[] = [
   'Backend',
   'Databases',
   'Languages',
-
   'DevOps',
   'Tools',
   'Methodologies',
   'Soft Skills',
-
-];
-
-export interface Certification {
-  id: string;
-  name: string;
-  category: 'Certifications';
-}
-
-export const certificationsData: Certification[] = [
-  { id: 'cert1', name: 'Professional Scrum Master I (PSM I)', category: 'Certifications' },
-  { id: 'cert2', name: 'Professional Scrum Master II (PSM II)', category: 'Certifications' },
-  { id: 'cert3', name: 'Professional Agile Leadership (PAL)', category: 'Certifications' },
-  { id: 'cert4', name: 'Professional Scrum Product Owner I (PSPO I)', category: 'Certifications' },
-  { id: 'cert5', name: 'Scaled Professional Scrum (SPS)', category: 'Certifications' },
-  { id: 'cert6', name: 'ITIL V3 Foundations', category: 'Certifications' },
 ];

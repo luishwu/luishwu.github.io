@@ -7,7 +7,7 @@ export function EducationSection() {
   const educationItems = timelineData.filter(item => item.type === 'education');
 
   return (
-    <section id="education" className="py-16 md:py-24 bg-background">
+    <section id="education" className="py-16 md:py-24 bg-secondary"> {/* Changed to bg-secondary */}
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground flex items-center justify-center gap-3">
@@ -22,11 +22,11 @@ export function EducationSection() {
         {educationItems.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {educationItems.map((item: TimelineItem) => (
-              <Card key={item.id} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+              <Card key={item.id} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card text-card-foreground"> {/* Ensure card has contrasting background */}
                 <CardHeader>
                   <div className="flex justify-between items-start mb-2">
                     <CardTitle className="text-xl font-semibold text-primary">{item.title}</CardTitle>
-                    <Badge variant="secondary" className="whitespace-nowrap">{item.date}</Badge>
+                    <Badge variant="outline" className="whitespace-nowrap bg-background text-foreground">{item.date}</Badge> {/* Ensure badge is visible */}
                   </div>
                   {item.institution && (
                     <p className="text-md text-muted-foreground">{item.institution}</p>

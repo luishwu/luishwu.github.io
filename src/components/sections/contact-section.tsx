@@ -65,7 +65,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-background">
+    <section id="contact" className="py-16 md:py-24 bg-secondary"> {/* Changed to bg-secondary */}
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground flex items-center justify-center gap-3">
@@ -77,7 +77,7 @@ export function ContactSection() {
           </p>
         </div>
 
-        <Card className="max-w-xl mx-auto shadow-lg">
+        <Card className="max-w-xl mx-auto shadow-lg bg-card text-card-foreground"> {/* Ensure card has contrasting background */}
           <CardHeader>
             <CardTitle>Send Me a Message</CardTitle>
             <CardDescription>I'm always open to discussing new projects, creative ideas or opportunities.</CardDescription>

@@ -2,7 +2,7 @@
 'use client';
 
 import React from 'react';
-import { Menu, Languages } from 'lucide-react'; // Added Languages icon for consistency if needed elsewhere
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { ModeToggle } from '@/components/mode-toggle';
@@ -12,8 +12,9 @@ const navLinks = [
   { href: '#hero', label: 'Home' },
   { href: '#timeline', label: 'Journey' },
   { href: '#skills', label: 'Skills' },
+  { href: '#certifications', label: 'Certifications' }, // Added Certifications link
   { href: '#education', label: 'Education' },
-  { href: '#languages', label: 'Languages' }, // Changed from AI Analyzer
+  { href: '#languages', label: 'Languages' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -43,7 +44,7 @@ export function PageHeader() {
         <a href="#hero" className="text-xl font-bold text-primary">
           Luis Wu
         </a>
-        <nav className="hidden items-center space-x-2 md:flex">
+        <nav className="hidden items-center space-x-1 md:flex"> {/* Reduced space-x-2 to space-x-1 for more items */}
           <NavigationLinks />
           <ModeToggle />
         </nav>
