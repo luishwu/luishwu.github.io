@@ -50,6 +50,7 @@ export function ContactSection() {
       email: "",
       message: "",
     },
+    mode: 'onChange', // Validate on change for immediate feedback
   });
 
   async function onSubmit(data: ContactFormValues) {
@@ -152,7 +153,11 @@ export function ContactSection() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" disabled={isSubmitting} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting || !form.formState.isValid} 
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                >
                   {isSubmitting ? (
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                   ) : (
