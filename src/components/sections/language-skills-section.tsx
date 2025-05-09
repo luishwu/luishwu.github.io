@@ -1,20 +1,27 @@
 
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Languages, Star, CheckCircle } from 'lucide-react'; // Using Languages, Star, CheckCircle icons
+import { Languages } from 'lucide-react';
+import type React from 'react';
+
+// Import flag icons
+import { SpainFlagIcon } from '@/components/icons/SpainFlagIcon';
+import { CataloniaFlagIcon } from '@/components/icons/CataloniaFlagIcon';
+import { UkFlagIcon } from '@/components/icons/UkFlagIcon';
+import { ChinaFlagIcon } from '@/components/icons/ChinaFlagIcon';
 
 interface LanguageSkill {
   id: string;
   name: string;
   level: 'Native' | 'Advanced';
-  icon: React.ElementType; // For specific icons per language if needed, e.g. country flags (not used yet)
+  flagComponent: React.ElementType<{ className?: string }>;
 }
 
 const languageSkillsData: LanguageSkill[] = [
-  { id: 'lang1', name: 'Spanish', level: 'Native', icon: Star },
-  { id: 'lang2', name: 'Catalan', level: 'Native', icon: Star },
-  { id: 'lang3', name: 'English', level: 'Advanced', icon: CheckCircle },
-  { id: 'lang4', name: 'Chinese (Mandarin)', level: 'Advanced', icon: CheckCircle },
+  { id: 'lang1', name: 'Spanish', level: 'Native', flagComponent: SpainFlagIcon },
+  { id: 'lang2', name: 'Catalan', level: 'Native', flagComponent: CataloniaFlagIcon },
+  { id: 'lang3', name: 'English', level: 'Advanced', flagComponent: UkFlagIcon },
+  { id: 'lang4', name: 'Chinese (Mandarin)', level: 'Advanced', flagComponent: ChinaFlagIcon },
 ];
 
 export function LanguageSkillsSection() {
@@ -35,11 +42,12 @@ export function LanguageSkillsSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {languageSkillsData.map((skill: LanguageSkill) => (
               <Card key={skill.id} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
-                <CardHeader className="items-center">
-                  <skill.icon className="h-10 w-10 text-primary mb-2" />
+                <CardHeader className="items-center pb-2 pt-4"> {/* Adjusted padding */}
+                  {/* Render the flag icon */}
+                  <skill.flagComponent className="h-8 w-auto mb-3 rounded border border-border" /> {/* Adjusted size, margin, added rounded and border */}
                   <CardTitle className="text-xl font-semibold text-primary">{skill.name}</CardTitle>
                 </CardHeader>
-                <CardContent className="flex-grow">
+                <CardContent className="flex-grow pt-0 pb-4"> {/* Adjusted padding */}
                   <Badge variant={skill.level === 'Native' ? 'default' : 'secondary'} className="text-sm">
                     {skill.level}
                   </Badge>
