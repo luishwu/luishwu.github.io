@@ -36,13 +36,13 @@ export const skillsData: Skill[] = [
 ];
 
 export const skillCategories: string[] = [
+  'Soft Skills',
+  'Methodologies',
   'Frontend',
   'Backend',
   'Databases',
   'DevOps',
   'Cloud',
   'Tools',
-  'Methodologies',
-  'Soft Skills',
 ];
 
