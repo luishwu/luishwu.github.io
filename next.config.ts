@@ -2,7 +2,7 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export', // Added for static HTML export
-  typescript: {
+  typescript: { 
     ignoreBuildErrors: true,
   },
   eslint: {
