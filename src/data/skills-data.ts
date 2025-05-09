@@ -20,16 +20,19 @@ export const skillsData: Skill[] = [
   { id: 'skill10', name: 'Git & GitHub', level: 95, category: 'Tools' },
   { id: 'skill11', name: 'Agile Methodologies', level: 90, category: 'Methodologies' },
   { id: 'skill12', name: 'Problem Solving', level: 95, category: 'Soft Skills' },
-  // Language skills removed as per request
+  { id: 'skill13', name: 'Azure DevOps', level: 85, category: 'DevOps' },
+  { id: 'skill14', name: 'Jira', level: 90, category: 'Tools' },
+  { id: 'skill15', name: 'Confluence', level: 88, category: 'Tools' },
+  { id: 'skill16', name: 'Bitbucket', level: 85, category: 'Tools' },
 ];
 
 export const skillCategories: string[] = [
   'Frontend',
   'Backend',
   'Databases',
-  // 'Languages' category removed as per request
   'DevOps',
   'Tools',
   'Methodologies',
   'Soft Skills',
 ];
+
