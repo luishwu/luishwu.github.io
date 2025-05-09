@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 
+import { SpainFlagIcon } from '../icons/SpainFlagIcon';
 export function HeroSection() {
   // Trigger rebuild
   return (
@@ -22,8 +23,9 @@ export function HeroSection() {
           <p className="mt-4 text-xl md:text-2xl text-muted-foreground">
             Engineering Manager / Delivery Manager
           </p>
-          <p className="mt-2 text-lg text-muted-foreground">
-            Barcelona, Spain • luishong.wu@gmail.com • (+34) 669485084
+ <p className="mt-2 text-lg text-muted-foreground flex items-center justify-center gap-2">
+            Barcelona, Spain <SpainFlagIcon className="inline-block w-5 h-5 ml-1" /> • luishong.wu@gmail.com • (+34) 669485084
+ 
           </p>
           <p className="mt-2 text-lg text-muted-foreground">
             <a href="https://www.linkedin.com/in/luiswu/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline" data-ai-hint="LinkedIn profile link">
