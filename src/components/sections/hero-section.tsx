@@ -26,7 +26,7 @@ export function HeroSection() {
           </p>
           <p className="mt-2 text-lg text-muted-foreground">
             <a href="https://www.linkedin.com/in/luiswu/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline" data-ai-hint="LinkedIn profile link">
-              https://www.linkedin.com/in/luiswu/
+              linkedin.com/in/luiswu
             </a>
           </p>
         </div>

@@ -14,17 +14,17 @@ export function FooterSection() {
         </p>
         <div className="flex space-x-3">
           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+            <Link href="https://github.com/luishwu" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
               <Github className="h-5 w-5" />
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+            <Link href="https://www.linkedin.com/in/luiswu/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
               <Linkedin className="h-5 w-5" />
             </Link>
           </Button>
            <Button variant="ghost" size="icon" asChild>
-            <Link href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter) Profile">
+            <Link href="https://x.com/LuisHWu" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter) Profile">
               <XSocialIcon className="h-5 w-5" />
             </Link>
           </Button>
