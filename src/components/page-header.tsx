@@ -2,8 +2,7 @@
 'use client';
 
 import React from 'react';
-// import Link from 'next/link'; // No longer needed as we use <a> for hash links
-import { Menu } from 'lucide-react';
+import { Menu, Languages } from 'lucide-react'; // Added Languages icon for consistency if needed elsewhere
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { ModeToggle } from '@/components/mode-toggle';
@@ -14,7 +13,7 @@ const navLinks = [
   { href: '#timeline', label: 'Journey' },
   { href: '#skills', label: 'Skills' },
   { href: '#education', label: 'Education' },
-  { href: '#ai-feedback', label: 'AI Analyzer' },
+  { href: '#languages', label: 'Languages' }, // Changed from AI Analyzer
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -24,8 +23,6 @@ function NavigationLinks({ onClick }: { onClick?: () => void }) {
     <>
       {navLinks.map((link) => (
         <Button key={link.label} variant="ghost" asChild onClick={onClick}>
-          {/* Using plain <a> for potentially faster in-page hash link navigation.
-              This relies on global 'scroll-behavior: smooth' in globals.css. */}
           <a href={link.href}>{link.label}</a>
         </Button>
       ))}
@@ -43,7 +40,6 @@ export function PageHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        {/* Use <a> for the logo link as it's a hash link */}
         <a href="#hero" className="text-xl font-bold text-primary">
           Profile Pulse
         </a>

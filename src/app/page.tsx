@@ -2,10 +2,10 @@ import { HeroSection } from '@/components/sections/hero-section';
 import { TimelineSection } from '@/components/sections/timeline-section';
 import { SkillsSection } from '@/components/sections/skills-section';
 import { EducationSection } from '@/components/sections/education-section';
-import { AiFeedbackSection } from '@/components/sections/ai-feedback-section';
+import { LanguageSkillsSection } from '@/components/sections/language-skills-section'; // New import
 import { ContactSection } from '@/components/sections/contact-section';
 import { FooterSection } from '@/components/sections/footer-section';
-import { PageHeader } from '@/components/page-header'; // Import PageHeader
+import { PageHeader } from '@/components/page-header';
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <TimelineSection />
       <SkillsSection />
       <EducationSection />
-      <AiFeedbackSection />
+      <LanguageSkillsSection /> {/* Replaced AiFeedbackSection */}
       <ContactSection />
       <FooterSection />
     </div>
