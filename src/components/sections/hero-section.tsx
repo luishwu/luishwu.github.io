@@ -16,7 +16,7 @@ export function HeroSection() {
             data-ai-hint="profile professional"
           />
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary">
-            John Doe
+            Luis Wu
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-muted-foreground">
             Creative Full-Stack Developer & AI Enthusiast

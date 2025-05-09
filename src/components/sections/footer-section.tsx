@@ -9,7 +9,7 @@ export function FooterSection() {
     <footer className="py-8 bg-secondary text-secondary-foreground border-t">
       <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center">
         <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-          &copy; {currentYear} John Doe. All rights reserved.
+          &copy; {currentYear} Luis Wu. All rights reserved.
         </p>
         <div className="flex space-x-3">
           <Button variant="ghost" size="icon" asChild>
@@ -28,7 +28,7 @@ export function FooterSection() {
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="mailto:johndoe@example.com" aria-label="Email John Doe">
+            <Link href="mailto:luiswu@example.com" aria-label="Email Luis Wu">
               <Mail className="h-5 w-5" />
             </Link>
           </Button>
