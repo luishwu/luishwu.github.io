@@ -7,6 +7,9 @@ body {
 }
 
 @layer base {
+  html {
+    scroll-padding-top: 4rem; /* Header height h-16 = 4rem */
+  }
   :root {
     --background: 0 0% 94.1%; /* Light Gray #F0F0F0 */
     --foreground: 210 10% 23%; /* Dark Slate Blue */
