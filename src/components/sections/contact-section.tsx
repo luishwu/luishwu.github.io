@@ -19,6 +19,9 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Send, Loader2 } from "lucide-react";
 import { useState } from "react";
+import { sendContactEmail } from '@/services/email-service';
+import type { ContactFormInput } from '@/ai/schemas/contact-form-schemas';
+
 
 const contactFormSchema = z.object({
   name: z.string().min(2, {
@@ -51,17 +54,34 @@ export function ContactSection() {
 
   async function onSubmit(data: ContactFormValues) {
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    console.log("Contact form submitted:", data);
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-      className: "bg-primary text-primary-foreground",
-    });
-    form.reset();
-    setIsSubmitting(false);
+    try {
+      // Cast to ContactFormInput as the schemas are compatible for the service call
+      const result = await sendContactEmail(data as ContactFormInput);
+
+      if (result.success) {
+        toast({
+          title: "Message Processed!",
+          description: result.statusMessage || "Thanks for reaching out. Your message has been prepared.",
+          className: "bg-primary text-primary-foreground",
+        });
+        form.reset();
+      } else {
+        toast({
+          title: "Error Processing Message",
+          description: result.statusMessage || "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error("Contact form submission error:", error);
+      toast({
+        title: "Error",
+        description: "An unexpected error occurred. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
