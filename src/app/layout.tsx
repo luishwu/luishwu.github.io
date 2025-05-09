@@ -6,8 +6,11 @@ import { Toaster } from '@/components/ui/toaster';
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: 'Profile Pulse',
+  title: 'Luis Wu',
   description: 'My Personal CV Page',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
