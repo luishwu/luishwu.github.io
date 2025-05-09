@@ -1,6 +1,7 @@
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { XSocialIcon } from '@/components/icons/XSocialIcon'; // New import
 
 export function FooterSection() {
   const currentYear = new Date().getFullYear();
@@ -23,12 +24,12 @@ export function FooterSection() {
             </Link>
           </Button>
            <Button variant="ghost" size="icon" asChild>
-            <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile">
-              <Twitter className="h-5 w-5" />
+            <Link href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter) Profile">
+              <XSocialIcon className="h-5 w-5" />
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="mailto:luiswu@example.com" aria-label="Email Luis Wu">
+            <Link href="mailto:luishong.wu@gmail.com" aria-label="Email Luis Wu">
               <Mail className="h-5 w-5" />
             </Link>
           </Button>
