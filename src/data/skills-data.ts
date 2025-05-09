@@ -26,6 +26,7 @@ export const skillsData: Skill[] = [
   { id: 'skill16', name: 'Bitbucket', level: 85, category: 'Tools' },
   { id: 'skill17', name: 'Azure', level: 80, category: 'Cloud' },
   { id: 'skill18', name: 'AWS', level: 75, category: 'Cloud' },
+  { id: 'skill19', name: 'CI/CD', level: 85, category: 'Methodologies' },
 ];
 
 export const skillCategories: string[] = [
@@ -38,4 +39,3 @@ export const skillCategories: string[] = [
   'Methodologies',
   'Soft Skills',
 ];
-
