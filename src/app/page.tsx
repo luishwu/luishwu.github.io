@@ -1,22 +1,22 @@
 import { HeroSection } from '@/components/sections/hero-section';
 import { TimelineSection } from '@/components/sections/timeline-section';
 import { SkillsSection } from '@/components/sections/skills-section';
-import { ProjectGallerySection } from '@/components/sections/project-gallery-section';
+import { EducationSection } from '@/components/sections/education-section'; // New import
 import { AiFeedbackSection } from '@/components/sections/ai-feedback-section';
 import { ContactSection } from '@/components/sections/contact-section';
 import { FooterSection } from '@/components/sections/footer-section';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Menu, Sun, Moon } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { ModeToggle } from '@/components/mode-toggle'; // We will create this component
+import { ModeToggle } from '@/components/mode-toggle';
 
 // Navigation Links data
 const navLinks = [
   { href: '#hero', label: 'Home' },
   { href: '#timeline', label: 'Journey' },
   { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
+  { href: '#education', label: 'Education' }, // Changed from Projects to Education
   { href: '#ai-feedback', label: 'AI Analyzer' },
   { href: '#contact', label: 'Contact' },
 ];
@@ -83,7 +83,7 @@ export default function Home() {
       <HeroSection />
       <TimelineSection />
       <SkillsSection />
-      <ProjectGallerySection />
+      <EducationSection /> {/* Replaced ProjectGallerySection */}
       <AiFeedbackSection />
       <ContactSection />
       <FooterSection />
