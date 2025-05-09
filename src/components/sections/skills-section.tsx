@@ -1,7 +1,8 @@
-import { Progress } from '@/components/ui/progress';
+
 import { skillsData, skillCategories, type Skill } from '@/data/skills-data';
 import { Wrench } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 export function SkillsSection() {
   return (
@@ -13,7 +14,7 @@ export function SkillsSection() {
             Skills & Expertise
           </h2>
           <p className="mt-3 text-lg text-muted-foreground">
-            A showcase of my technical abilities and proficiency levels.
+            A showcase of my technical abilities and professional competencies.
           </p>
         </div>
 
@@ -23,20 +24,18 @@ export function SkillsSection() {
             if (categorySkills.length === 0) return null;
 
             return (
-              <Card key={category} className="shadow-lg">
+              <Card key={category} className="shadow-lg bg-card text-card-foreground">
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold text-primary">{category}</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  {categorySkills.map((skill: Skill) => (
-                    <div key={skill.id}>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm font-medium text-foreground">{skill.name}</span>
-                        <span className="text-xs text-muted-foreground">{skill.level}%</span>
-                      </div>
-                      <Progress value={skill.level} className="h-3 [&>div]:bg-primary" aria-label={`${skill.name} proficiency ${skill.level}%`} />
-                    </div>
-                  ))}
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {categorySkills.map((skill: Skill) => (
+                      <Badge key={skill.id} variant="secondary" className="text-sm py-1 px-3">
+                        {skill.name}
+                      </Badge>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             );
@@ -46,3 +45,4 @@ export function SkillsSection() {
     </section>
   );
 }
+
