@@ -1,3 +1,4 @@
+
 export interface Skill {
   id: string;
   name: string;
@@ -18,18 +19,15 @@ export const skillsData: Skill[] = [
   { id: 'skill9', name: 'Docker', level: 80, category: 'DevOps' },
   { id: 'skill10', name: 'Git & GitHub', level: 95, category: 'Tools' },
   { id: 'skill11', name: 'Agile Methodologies', level: 90, category: 'Methodologies' },
-  { id: 'skill12', name: 'Problem Solving', level: 95, category: 'Soft Skills' },  { id: 'lang1', name: 'Spanish', proficiency: 'Native', category: 'Languages' },
-  { id: 'lang2', name: 'Catalan', proficiency: 'Native', category: 'Languages' },
-  { id: 'lang3', name: 'English', proficiency: 'Advance', category: 'Languages' },
-  { id: 'lang4', name: 'Chinese', proficiency: 'Advance', category: 'Languages' },
-
+  { id: 'skill12', name: 'Problem Solving', level: 95, category: 'Soft Skills' },
+  // Language skills removed as per request
 ];
 
 export const skillCategories: string[] = [
   'Frontend',
   'Backend',
   'Databases',
-  'Languages',
+  // 'Languages' category removed as per request
   'DevOps',
   'Tools',
   'Methodologies',
