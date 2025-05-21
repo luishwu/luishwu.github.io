@@ -4,13 +4,12 @@ import { ArrowDown } from 'lucide-react';
 
 import { SpainFlagIcon } from '../icons/SpainFlagIcon';
 export function HeroSection() {
-  // Trigger rebuild
   return (
     <section id="hero" className="py-20 md:py-32 bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <div className="mb-8">
           <Image
-            src="/profile_web.png"
+            src="../../public/profile_web.png"
             alt="Profile Picture"
             width={160}
             height={160}
