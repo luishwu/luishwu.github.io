@@ -30,4 +30,4 @@ Coordinate activities within their team and with other departments such as marke
 e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 b:null
 c:null
-10:[["$","title","0",{"children":"Profile Pulse"}],["$","meta","1",{"name":"description","content":"My Personal CV Page"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
+10:[["$","title","0",{"children":"Luis Wu"}],["$","meta","1",{"name":"description","content":"My Personal CV Page"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]

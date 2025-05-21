@@ -1,4 +1,4 @@
-# **App Name**: Profile Pulse
+# **App Name**: Luis Wu
 
 ## Core Features:
 
